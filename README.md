@@ -11,3 +11,12 @@
   - `/src/model`      - all your server datas would be got and analysis in this module , I had used some auth way and throw way to handle your server data .
   - `/src/pages`      - pages in your project 
   -`/src/utils`       - all utils
+
+## to start
+
+  ```
+    cd preact-basic && npm install
+    npm run start
+
+  ```
+
