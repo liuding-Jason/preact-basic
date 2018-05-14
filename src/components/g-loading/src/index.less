@@ -1,0 +1,123 @@
+/*
+	intro : loading component
+	Author : chenchao
+	Date : 2018-05-10
+*/
+@import url(../../style/index.less) ;
+.t-g-load{}
+.t-g-load.block {
+  display: block;
+}
+.t-g-load.none {
+  display: none;
+}
+.t-g-load.dark{
+  background-color: rgba(0 , 0 , 0 , 0.6) ;
+}
+.t-g-load.light{
+  background-color: transparent ;
+}
+.t-g-load-con {
+	position: absolute;
+  margin: auto;
+  height: 60px;
+  width: 60px;
+  left: 50%;
+	top: 50%;
+	padding: 10px ;
+	margin-top: -30px;
+	margin-left: -30px;
+	box-sizing: border-box;
+	border-radius: 5px ;
+}
+.t-g-load-con.dark{
+  background-color: transparent;
+}
+.t-g-load-con.light {
+  background-color: rgba(0,0,0,.6);
+}
+.t-g-load-circular {
+  -webkit-animation: rotate 2s linear infinite;
+  animation: rotate 2s linear infinite;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+}
+.t-g-load-path {
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  -webkit-animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+          animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+  stroke-linecap: round;
+}
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px;
+  }
+}
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px;
+  }
+}
+@-webkit-keyframes color {
+  100%,
+  0% {
+    stroke: @c-topic-color;
+  }
+  40% {
+    stroke: @c-topic-color;
+  }
+  66% {
+    stroke: @c-topic-color;
+  }
+  80%,
+  90% {
+    stroke: @c-topic-color;
+  }
+}
+@keyframes color {
+  100%,
+  0% {
+    stroke: @c-topic-color;
+  }
+  40% {
+    stroke: @c-topic-color;
+  }
+  66% {
+    stroke: @c-topic-color;
+  }
+  80%,
+  90% {
+    stroke: @c-topic-color;
+  }
+}

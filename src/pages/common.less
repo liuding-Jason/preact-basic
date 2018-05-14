@@ -1,0 +1,149 @@
+/*
+    common style
+*/
+//basic color
+@main-color: #FF6633 ;
+//font color
+@main-font-color : #333 ;
+@content-color: #909090 ;
+@sub-font-color : #666 ;
+@tag-color: #00BAEB ;
+@border-color: #F6F6F6 ;
+@disable-color: #acacac ;
+// common size
+@p15 : .35rem ;
+@p10 : 10px ;
+@p8 : 8px ;
+@p6 : 6px ;
+
+// font
+@main-title-font: .43rem ;
+@sub-title-font : .4rem ;
+@content-font : .35rem ;
+@tag-font: .25rem ;
+
+.t-row{
+    display: flex ;
+    flex-direction: row ;
+    margin-left: 0 ;
+    margin-right: 0 ;
+}
+.t-col-12 , .t-col-8{
+    box-sizing: border-box;
+    display: inline-block;
+    float: left;
+}
+.t-col-12 {
+    width: 50% ;
+}
+.t-col-8 {
+    width: 33.33333333% ;
+}
+.t-row-item{
+    flex: 1 ;
+    display: inline-block ;
+}
+.padding15 {
+    padding: 0 @p15 ;
+}
+.marginR8{
+    margin-right: @p8 ;
+}
+.marginL8{
+    margin-left: @p8 ;
+}
+.flex {
+    display: flex;
+}
+
+.flex-jc-ac {
+    .flex ;
+    flex-direction: row ;
+    justify-content: center ;
+    align-items: center ;
+}
+
+.flex-between{
+    .flex;
+    justify-content: space-between ;
+}
+.flex1 {
+    flex : 1 ;
+}
+.t-main-title{
+    color: @main-font-color ;
+    font-size: @main-title-font ;
+    font-weight: 700 ;
+}
+.t-sub-title{
+    color: @sub-font-color ;
+    font-size: @sub-title-font ;
+}
+.t-content-font{
+    font-size: @content-font ;
+    color: @content-color ;
+    
+}
+.t-main-color {
+    color: @main-color ;
+}
+// primary button on - 激活 off - 原有状态
+.t-primary-button-on ,  .t-primary-button-off{
+    font-size: @content-font ;
+    background-color: @main-color ;
+    border: 1px solid @main-color ;
+    color: #fff ;
+    padding: @p6 @p15 ;
+}
+
+.t-primary-button-on.disable {
+    background-color:  @disable-color ;
+    border-color: @disable-color ;
+}
+
+.t-primary-button-off{
+    color: @main-color ;
+    background-color: #fff  ;
+}
+.t-tag-off , .t-tag-on {
+    font-size: @tag-font ;
+    background-color: #fff ;
+    padding: 2px 5px ;
+    color: @tag-color ;
+    border: 1px solid @tag-color ;
+    font-style:normal ;
+}
+.t-tag-on{
+    background-color: #F0F5FC ;
+    border: 1px solid #F0F5FC ;
+}
+.nowrap-ellipsis{
+    text-overflow : ellipsis ;
+    overflow: hidden ;
+    white-space: nowrap;
+}
+// model
+.t-full-screen{
+    position: absolute;
+    z-index: 100 ;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0 ;
+
+    overflow: hidden;
+    user-select: none;
+}
+.t-model{
+    display: none ;
+    opacity: 1 ;
+    transition: all .2s ;
+    background-color: rgba(0 , 0 , 0 , 0.6) ;
+}
+.t-model.block {
+    display: block ;
+}
+.t-model.none {
+    display: none ;
+}
