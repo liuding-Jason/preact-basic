@@ -10,6 +10,7 @@ data|组件渲染的数据|Object|无
 
 ## API
 名称|说明|类型|默认值
+-|-|-|-
 onOk|确认事件|function|无
 
 ## Simple Use
